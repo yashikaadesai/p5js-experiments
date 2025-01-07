@@ -9,10 +9,7 @@ function setup() {
   cols = floor(width / scale);
   rows = floor(height / scale);
 
-  // Initialize flow field
   flowfield = new Array(cols * rows);
-
-  // Create particles
   for (let i = 0; i < 500; i++) {
     particles.push(new Particle());
   }
