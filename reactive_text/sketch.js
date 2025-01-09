@@ -12,7 +12,8 @@ function draw() {
   let x = width / 2;
   let y = height / 2 + sin(angle) * 100; // Wave motion
   textAlign(CENTER);
-  text("यहाँ से बहुत दूर", x, y); // "Far from here" in Hindi
+  text("यहाँ से बहुत दूर", x, y); 
 
   angle += 0.05; // Increment angle for the sine wave
+  
 }
