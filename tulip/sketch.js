@@ -1,7 +1,7 @@
 function setup() {
     createCanvas(2000, 800);
     noLoop(); // Render once
-    colorMode(HSB, 360, 100, 100, 100); // Use HSB for holographic colors
+    colorMode(HSB, 360, 100, 100, 100); // HSB is for holo colors 
     noFill();
     background(0);
   }
@@ -9,7 +9,7 @@ function setup() {
   function draw() {
     translate(width / 2, height / 2 + 100);
   
-    // Draw tulip petals
+    // loop for drawing the tulip petals 
     for (let i = 0; i < 6; i++) {
       let angle = i * PI / 3;
       push();
@@ -42,4 +42,10 @@ function drawPetal() {
       0, -petalHeight
     );
   }
+}
+// Function to draw the stem
+function drawStem() {
+  stroke(120, 80, 60); // Green stem
+  strokeWeight(10);
+  line(0, 100, 0, height / 2); // Vertical stem
 }
