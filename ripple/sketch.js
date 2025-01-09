@@ -12,7 +12,7 @@ function draw(){
     translate(width/2,height/2);
 
     var maxRadius=324;
-    var numRipples = 20;
+    var numRipples = 20;      // edit here for number of ripple strokes
     var angleOffset=frameCount*0.01;
 
     for (var i=0;i<numRipples;i++){
