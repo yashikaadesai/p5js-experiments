@@ -76,3 +76,21 @@ for(var i = 0; i < particles.length; i++) {
 
 fr.html(floor(frameRate()));
 displayStanza();
+
+function displayStanza() {
+  fill(0, 8);
+  rect(0, 0, width, height);
+  
+  fill(255);
+  textSize(42);
+  textFont(font);
+  textAlign(CENTER, CENTER);
+  var lines = stanzas[state];
+  for(var i = 0; i <= clickcountStanzaOne && i < lines.length; i++) {
+    text(lines[i], width/2, height/2 - 40 + i * 40);
+  }
+  textSize(24);
+  fill(200);
+  text(translations[state], width/2, height - 50);
+  drawGraphic();
+}
