@@ -47,3 +47,22 @@ function setup(){
   capturer.start();
   recording=true;
 }
+function draw(){
+  if(recording)
+    capturer.capture(canva);
+}
+
+var yoff=0;
+for(var y=0;y<rows;y++){
+  var xoff=0;
+  for(var x=0;x<cols;x++){
+  var index=x+y*cols;
+  var angle=noise(xoff,yoff,zoff)*PI*3;
+  var v=p5.vector.fromAngle(angle);
+  v.setMag(1);
+  flowfield[index]=v;
+  xoff+=inc;
+}
+yoff+=inc;
+zoff+=0.0003;
+}
